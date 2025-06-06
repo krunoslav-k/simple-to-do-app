@@ -39,3 +39,12 @@ function addToDo() {
 }
 
 addButtonEl.addEventListener("click", addToDo);
+
+toDoListEl.addEventListener("click", function (e) {
+  if (e.target.classList.contains("delete-icon")) {
+    const li = e.target.closest("li");
+    if (li) {
+      li.remove();
+    }
+  }
+});
