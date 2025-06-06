@@ -17,7 +17,7 @@ function addToDo() {
   chechboxLabelEl.textContent = ` ${inputFieldEl.value}`;
 
   const deleteIconEl = document.createElement("img");
-  deleteIconEl.src = "./images/delete.png";
+  deleteIconEl.src = "./images/black delete icon.png";
   deleteIconEl.classList.add("delete-icon");
 
   toDoListItemEl.appendChild(checkboxInputEl);
@@ -26,6 +26,16 @@ function addToDo() {
   toDoListEl.appendChild(toDoListItemEl);
 
   inputFieldEl.value = "";
+
+  deleteIconEl.addEventListener("mouseover", () => {
+    console.log(deleteIconEl);
+    deleteIconEl.src = "./images/red delete icon.png";
+  });
+
+  deleteIconEl.addEventListener("mouseout", () => {
+    console.log(deleteIconEl);
+    deleteIconEl.src = "./images/black delete icon.png";
+  });
 }
 
 addButtonEl.addEventListener("click", addToDo);
