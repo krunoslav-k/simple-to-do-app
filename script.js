@@ -16,8 +16,13 @@ function addToDo() {
   chechboxLabelEl.htmlFor = `item--${toDoCounter}`;
   chechboxLabelEl.textContent = ` ${inputFieldEl.value}`;
 
+  const deleteIconEl = document.createElement("img");
+  deleteIconEl.src = "./images/delete.png";
+  deleteIconEl.classList.add("delete-icon");
+
   toDoListItemEl.appendChild(checkboxInputEl);
   toDoListItemEl.appendChild(chechboxLabelEl);
+  toDoListItemEl.appendChild(deleteIconEl);
   toDoListEl.appendChild(toDoListItemEl);
 
   inputFieldEl.value = "";

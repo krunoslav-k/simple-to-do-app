@@ -1,14 +1,21 @@
-.removeButton {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background: red;
+html {
+  font-size: 20px;
 }
 
-.todoList li {
+.to-do-list li {
   list-style-type: none;
+  line-height: 1.75rem;
+  font-size: 1.25rem;
 }
 
-.todoList li.done {
+.to-do-list input:checked + label {
   text-decoration: line-through;
+}
+
+.delete-icon {
+  height: 1rem;
+  width: 1rem;
+  margin-left: 0.5rem;
+  position: relative;
+  top: 2px;
 }
