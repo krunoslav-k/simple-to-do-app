@@ -1,5 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
 html {
   font-size: 20px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  height: 100%;
+  background-color: #dbd8ae;
+  flex-direction: column;
+  padding: 12vh;
+}
+
+h1 {
+  color: #eaf4d3;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.app-container {
+  padding: 1.75rem;
+  background-color: #ca907e;
+  border-radius: 20px;
+}
+
+.input-field {
+  width: 80%;
 }
 
 .to-do-list li {

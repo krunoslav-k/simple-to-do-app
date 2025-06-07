@@ -1,5 +1,30 @@
-html {
-  font-size: 20px;
+@import "./base/reset";
+@import "./base/typography";
+@import "./base/variables";
+@import "./base/abstracts";
+
+main {
+  height: 100%;
+  background-color: $vanilla;
+  @extend %flex;
+  flex-direction: column;
+  padding: 12vh;
+}
+
+h1 {
+  color: $nyanza;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.app-container {
+  padding: 1.75rem;
+  background-color: $rosy-brown;
+  border-radius: 20px;
+}
+
+.input-field {
+  width: 80%;
 }
 
 .to-do-list li {
