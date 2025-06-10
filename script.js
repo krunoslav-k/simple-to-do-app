@@ -43,9 +43,9 @@ function createDeleteIcon() {
 
 function createToDoListItem(toDoCounter) {
   const toDoListItemEl = document.createElement("li");
-  checkboxInputEl = createCheckboxInput(toDoCounter);
-  checkboxLabelEl = createCheckboxLabel(toDoCounter);
-  deleteIconEl = createDeleteIcon();
+  const checkboxInputEl = createCheckboxInput(toDoCounter);
+  const checkboxLabelEl = createCheckboxLabel(toDoCounter);
+  const deleteIconEl = createDeleteIcon();
 
   toDoListItemEl.appendChild(checkboxInputEl);
   toDoListItemEl.appendChild(checkboxLabelEl);
