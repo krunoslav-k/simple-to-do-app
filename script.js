@@ -25,6 +25,12 @@ function createCheckboxLabel(toDoCounter) {
   return chechboxLabelEl;
 }
 
+function createCheckboxWrapper(toDoCounter) {
+  const checkboxWrapper = document.createElement("div");
+  checkboxWrapper.classList.add("checkbox-wrapper");
+  return checkboxWrapper;
+}
+
 function createDeleteIcon() {
   const deleteIconEl = document.createElement("img");
   deleteIconEl.src = "./images/black delete icon.png";
@@ -45,10 +51,12 @@ function createToDoListItem(toDoCounter) {
   const toDoListItemEl = document.createElement("li");
   const checkboxInputEl = createCheckboxInput(toDoCounter);
   const checkboxLabelEl = createCheckboxLabel(toDoCounter);
+  const checkboxWrapperEl = createCheckboxWrapper(toDoCounter);
   const deleteIconEl = createDeleteIcon();
 
-  toDoListItemEl.appendChild(checkboxInputEl);
-  toDoListItemEl.appendChild(checkboxLabelEl);
+  checkboxWrapperEl.appendChild(checkboxInputEl);
+  checkboxWrapperEl.appendChild(checkboxLabelEl);
+  toDoListItemEl.appendChild(checkboxWrapperEl);
   toDoListItemEl.appendChild(deleteIconEl);
 
   return toDoListItemEl;
