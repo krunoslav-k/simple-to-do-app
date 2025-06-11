@@ -77,6 +77,10 @@ h1 {
   background-color: #b6cffa;
   font-weight: 900;
   text-transform: uppercase;
+
+  &:hover {
+    background-color: #91a8d0;
+  }
 }
 
 .to-do-list li {
@@ -84,11 +88,17 @@ h1 {
   background-color: $white;
   border-radius: 0.3rem;
   margin: 0.5rem 0rem;
+  padding-left: 0.5rem;
   line-height: 1.75rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
   @extend %flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.to-do-list li label {
+  padding-left: 0.5rem;
+  color: #545454;
 }
 
 .to-do-list input:checked + label {
@@ -104,6 +114,5 @@ h1 {
   &:hover {
     height: 1.1rem;
     width: 1.1rem;
-    top: 3px;
   }
 }
